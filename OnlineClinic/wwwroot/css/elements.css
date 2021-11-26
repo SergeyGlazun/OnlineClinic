@@ -1,0 +1,46 @@
+﻿header {
+    position: sticky;
+    z-index: 3;
+    background-color: rgb(255, 255, 255);
+    ;
+    top: 0;
+}
+
+.telefon {
+    list-style: none;
+    background: url(https://img.icons8.com/ios-glyphs/30/000000/phone-contact.png) no-repeat 0 2px;
+    padding-left: 44px;
+}
+
+.map {
+    list-style: none;
+    background: url(https://img.icons8.com/material-outlined/24/000000/place-marker--v2.png) no-repeat 0 2px;
+    padding-left: 44px;
+}
+
+.about {
+    float: left;
+    margin-right: 7px;
+}
+
+.About {
+    margin-top: 50px;
+}
+
+.benefits {
+    font-size: 19px;
+}
+
+.fon_1 {
+    background-color: rgba(127, 124, 139, 0.089);
+}
+
+.fon_2 {
+    background-color: rgba(179, 170, 226, 0.089);
+}
+
+.foto {
+    border-radius: 200px;
+    height: 300px;
+    width: 300px;
+}

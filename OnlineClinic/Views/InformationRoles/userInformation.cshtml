@@ -1,0 +1,19 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" style=" text-align:center">
+            <h1>Ваши записи к врачам</h1>
+            @{
+                foreach (var item in Model)
+                {
+                    <hr />
+                    <h5>День: @item.Data</h5>
+                    <h5>Фамилия врача: @item.SurnameDoctor</h5>
+                    <h5>Время записи: @item.TimeReceipt</h5>
+                    <h5>Кабинет: @item.OfficeNumber</h5>
+
+                }
+            }
+        </div>
+    </div>
+</div>

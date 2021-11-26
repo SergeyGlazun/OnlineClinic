@@ -1,0 +1,55 @@
+﻿@model OnlineClinic.Models.AuthorizationAuthentication.ViewModels.RegisterModel
+
+
+<div class="container bodyLogin">
+            <form asp-action="Register">            
+                    <div class="row">
+                        <div class="col-md-6 formRegistration">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="UserName" class="control-label"></label>
+                                <input asp-for="UserName" class="form-control" placeholder="Username" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input asp-for="Password" class="form-control" placeholder="Password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="PasswordConfirm" class="control-label"></label>
+                                <input asp-for="PasswordConfirm" class="form-control" placeholder="PasswordConfirm" />
+                                <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 formRegistration">
+                            <div class="form-group">
+                                <label asp-for="PhoneNumber" class="control-label"></label>
+                                <input asp-for="PhoneNumber" class="form-control" placeholder="PhoneNumber" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Lastname" class="control-label"></label>
+                                <input asp-for="Lastname" class="form-control" placeholder="Lastname" />
+                                <span asp-validation-for="Lastname" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address" class="control-label"></label>
+                                <input asp-for="Address" class="form-control" placeholder="Citi" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Подтвердить" class="btn btn-primary" />
+                    </div>
+             
+
+               
+            </form>
+  
+</div>
+
+
+

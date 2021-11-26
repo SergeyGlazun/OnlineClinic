@@ -1,0 +1,25 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h5>Записи</h5>
+            @{
+                foreach (var item in Model)
+                {
+                    <hr />
+                    <h5>День: @item.Data</h5>
+                    <h5>Фамилия пациента: @item.SurnamePatient</h5>
+                    <h5>Время записи: @item.TimeReceipt</h5>
+                    <h5>Кабинет: @item.OfficeNumber</h5>
+
+                }
+            }
+        </div>
+        <div class="col-lg-6">
+            <h5>Редактировать аккаунт</h5>
+            @await Html.PartialAsync("RedactorDoctorPage",new FileModel())
+            @await Html.PartialAsync("RedactorDoctorPageData", new Doctor())
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,23 @@
+﻿.Kalendar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+   
+}
+.blockTimeRegistration {
+    background-color: #EEDDFF;
+   /* background-color: #0094ff;*/
+    /* border: 6px solid #7922CC;*/
+    border: 6px solid #0026ff;
+    border-radius: 25px;
+}
+
+    .blockTimeRegistration:hover {
+        background-color: blueviolet;
+        cursor: pointer;
+    }
+.navigation {
+    display: inline;
+    padding: 30px;
+}

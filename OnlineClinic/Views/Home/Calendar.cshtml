@@ -1,0 +1,123 @@
+﻿
+@{
+
+    <div class="Kalendar" id="ajaxCalendar">
+
+
+        @{
+            DateTime now = DateTime.Now;
+
+            <div class="navigation">
+
+                <input id="elem1" type="date" name="quantity" class="btn btn-primary" value="Выбирите день">
+
+                @*<a class="btn btn-primary"  id="str" style="width:200px"
+                       href=""
+                       data-ajax="true"
+                       data-ajax-url="/Home/Calendar/@Model.IdDoctor?day=@now.Day"
+                       data-ajax-update="#ajaxCalendar">
+                        @now.ToString("D")
+                    </a>
+                    <a class="btn btn-primary qq" style="width:200px"
+                       href=""
+                       data-ajax="true"
+                       data-ajax-url="/Home/Calendar/@Model.IdDoctor?day=@now.AddDays(1).Day"
+                       data-ajax-update="#ajaxCalendar">
+                        @now.AddDays(1).ToString("D")
+                    </a>*@
+
+
+
+                @*<input id="butt" type="button" value="Кнопка" /><br><br>*@
+
+                <div id="str">Выбирите число и время</div>
+
+                <script>
+                        elem1.onclick = function () {
+                            let data = document.getElementById('elem1').value;
+
+                            let day = data.split('-');
+
+                            if (data != "") {
+                                  document.getElementById('str').innerHTML = `<a class="btn btn-primary" style="width:200px"
+                       href=""
+                       data-ajax="true"
+                       data-ajax-url="/Home/Calendar/@Model.IdDoctor?day=${day[2]}"
+                       data-ajax-update="#ajaxCalendar">
+                     подвердить
+                    </a>`
+                            }
+
+                    }
+
+                    elem1.onmouseout= function () {
+                            let data = document.getElementById('elem1').value;
+
+                            let day = data.split('-');
+
+                            if (data != "") {
+                                  document.getElementById('str').innerHTML = `<a class="btn btn-primary" style="width:200px"
+                       href=""
+                       data-ajax="true"
+                       data-ajax-url="/Home/Calendar/@Model.IdDoctor?day=${day[2]}"
+                       data-ajax-update="#ajaxCalendar">
+                     подвердить
+                    </a>`
+                            }
+
+                    }
+                </script>
+            </div>
+
+            bool color = false;
+            foreach (KeyValuePair<string, string> time in Model.timeReceipt)
+            {
+
+                if (@Model.Time.Count > 0)
+                {
+                    foreach (var item in Model.Time)
+                    {
+                        if (@time.Value == @item)
+                        {
+                            <div style="background-color:red" class="blockTimeRegistration">
+                                <h4> @time.Key </h4>
+                            </div>
+                            color = true;
+                            break;
+                        }
+
+                    }
+                }
+                if (color)
+                {
+                    color = false;
+                    continue;
+                }
+                else
+                {
+                    @if (User.Identity.IsAuthenticated)
+                    {
+
+                        <div class="blockTimeRegistration"
+                             onclick="location.href = '/Home/RecordPage/?timeRecord=@time.Value&idDoctor=@Model.IdDoctor&dayRegistration=@Model.dayRegistration'">
+                            <h4> @time.Key </h4>
+                        </div>
+                    }
+                    else
+                    {
+
+                        <a asp-controller="Account"
+                           asp-action="Login"
+                           class="blockTimeRegistration"
+                           onclick="location.href = '/Account/Login/'">
+                            <h4> @time.Key </h4>
+                        </a>
+                    }
+
+                }
+
+            }
+        }
+    </div>
+}
+

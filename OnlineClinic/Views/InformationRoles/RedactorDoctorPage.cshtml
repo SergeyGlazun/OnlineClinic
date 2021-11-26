@@ -1,0 +1,22 @@
+﻿
+@model OnlineClinic.Models.FileModel
+
+<div id="ajaxFoto">
+   Фото
+    <form asp-action="RedactorDoctorPage"
+          asp-controller="InformationRoles"
+          method="post"
+          enctype="multipart/form-data"
+          data-ajax="true"
+          data-ajax-update="#ajaxFoto"
+          data-ajax-mode="replace"
+          data-ajax-method="post">
+
+        <input type="file" name="uploadedFile" /><br>
+
+        <input type="submit" value="Загрузить" />
+
+    </form>
+</div>
+
+

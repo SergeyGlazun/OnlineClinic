@@ -1,0 +1,43 @@
+﻿
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6" style="margin-top:40px; text-align:center">
+            @{
+                foreach (Doctor item in Model.clinicContext.Doctors)
+                {
+                    if (@item.Id == Model.IdDoctor)
+                    {
+                        <img src="@item.Foto" class="foto" alt="...">
+                        <h5>@item.Surname</h5>
+                        <h5>@item.Name</h5>
+                        <h5>@item.Patronymic</h5>
+                        <h6>Кабинет №@item.OfficeNumber</h6>
+                        <h5>Специальность: @item.Specialty</h5>
+                       
+
+                    }
+                }
+            }
+        </div>
+        <div class="col-lg-6" style="margin-top:40px; text-align:center">
+
+
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <h6>Для записи к врачу пройдите регистрацию</h6>
+            }
+            else
+            {              
+                    DateTime now = DateTime.Now;
+                    <h5>Сегодня: @now.ToString("D")</h5>             
+            }
+
+            @await Html.PartialAsync("Calendar")
+
+        </div>
+    </div>
+
+
+
+</div>

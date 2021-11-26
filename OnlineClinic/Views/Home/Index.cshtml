@@ -1,0 +1,148 @@
+﻿@using OnlineClinic.Models.Db
+@model IEnumerable<Doctor>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/img/AboutImg/персонал.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Персонал</h5>
+                                <p>В QU Medicine работают главные специалисты Департамента Здравоохранения г. Гомеля</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/AboutImg/ковид.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>СOVID-19</h5>
+                                <p>Вакциниравоние, тесты и востановлене после KOVID-19</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/AboutImg/оборудование.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Оборудование</h5>
+                                <p>Современное оборудование для диагностики и операция</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container About">
+    <div class="row">
+        <div class="col-lg-6 fon_1">
+            <br>
+            <h3>О КЛИНИКЕ</h3>
+            <br>
+
+            <h5>
+                <img src="https://img.icons8.com/material/24/000000/task-completed.png" class="about" alt="">Клиника
+                «Здоровье» - лидер здравоохранения в Гомельской области. <br>
+            </h5>
+            Крупнейшее амбулаторно-поликлиническое учреждение в Московской области.
+            Лидер с 2005 года, которому доверили свое здоровье уже более 296000 пациентов.
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>НАШИ ПРЕИМУЩЕСТВА:</h3>
+            <br>
+            <h5>
+                <img src="https://img.icons8.com/material/24/000000/task-completed.png" class="about" alt="">№1 по
+                оснащению
+            </h5>
+
+            <p>
+                Передовое ультрасовременное диагностическое оборудование от наших партнеров General Electric (США) и
+                Siemens (Германия).
+                Единственное в Гомеьской области полностью укомплектованное аппаратами МРТ, КТ, УЗИ, цифровым рентгеном,
+                цифровым маммографом и денситометром диагностическое отделение.
+            </p>
+
+            <h5>
+                <img src="https://img.icons8.com/material/24/000000/task-completed.png" class="about" alt="">№1 по
+                скорости и открытости<br>
+            </h5>
+
+            <p>
+                Крупнейшая и единственная в Беларуси прозрачная экспресс-лаборатория открытого типа,
+                «OPEN-LAB», выполняющая все основные анализы в экспресс-режиме на глазах у пациентов
+                в кратчайшие сроки (от 30 минут до 4 часов).
+            </p>
+        </div>
+
+        <div class="col-lg-6 fon_2">
+            <br>
+            <h3>ПОЧЕМУ ОБРАЩАЮТСЯ К НАМ?</h3>
+            <br>
+            <p class="benefits">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/add--v2.png"
+                     style="margin-right: 10px;" alt="">№1 по образовательной деятельности. Клиника Здоровье - первое и
+                единственное официальное частное медико-образовательное учреждение в Гомельской области,
+                имеющее образовательную лицензию государственного образца, проводящее ежемесячно на собственной базе
+                сертифицированные семинары и конференции первых лиц
+                научного сообщества России, академиков, профессоров и докторов медицинских наук.
+            </p>
+
+            <br>
+            <br>
+
+            <p class="benefits">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/add--v2.png"
+                     style="margin-right: 10px;" alt=""> №1 по подбору специалистов. Клиника Здоровье - крупнейшее частное
+                учреждение Московской области, поэтому практически каждый врач мечтает работать
+                у нас, а мы уже выбираем таланты! Самое главное - люди, высококлассные врачи, профессионалы с большой буквы,
+                которые уже помогли десяткам тысяч людей.
+            </p>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 wrapper">
+            <div class="slider">
+
+                @{
+                   
+                    foreach (Doctor item in Model)
+                    {
+                        <div class="slider__item filter" onclick="location.href='/Home/DoctorInformation/?id=@item.Id&day=@DateTime.Now.Day'">
+
+                            <img src="@item.Foto" class="foto" alt="...">
+                            <h6>@item.Specialty</h6>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
